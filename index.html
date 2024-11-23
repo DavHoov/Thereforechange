@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>∴Δ</h1>
+        <p id="randomSentence">Loading...</p>  <!-- This will show the random sentence -->
+    </div>
+
+    <script>
+        // List of preselected sentences
+        const sentences = [
+            "Sundays have so much potential.",
+            "Step 1 starts today.",
+            "A journey of a thousand miles begins with a single step.",
+            "The only limit to our realization of tomorrow is our doubts of today.",
+            "Your growth IS the change.",
+            "Today's dream is tomorrow's reality.",
+            "Success is not final, failure is not fatal: It is the courage to change that counts."
+        ];
+
+        // Function to generate a random sentence
+        function generateRandomSentence() {
+            const randomIndex = Math.floor(Math.random() * sentences.length);
+            const randomSentence = sentences[randomIndex];
+            document.getElementById("randomSentence").textContent = randomSentence;
+        }
+
+        // Automatically generate a random sentence when the page loads
+        window.onload = generateRandomSentence;
+    </script>
+</body>
+</html>
